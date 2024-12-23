@@ -22,7 +22,7 @@ phần tử liền kề nếu chúng không đúng thứ tự. Thuật toán nà
 lớn vì độ phức tạp thời gian trung bình và trường hợp xấu nhất của nó khá cao.
 
 e) Minh hoạ: 
-
+```python
 numbers = [20, 10, 16, 6, 89]
 for i in range(0, len(numbers)):
     for j in range(i+1, len(numbers)):
@@ -30,24 +30,29 @@ for i in range(0, len(numbers)):
             temp = numbers[j]
             numbers[j] = numbers[i]
             numbers[i] = temp
-
+```
 1. Lần lặp đầu tiên i = 0:
 - So sánh từng phần tử:
+```python
 * numbers[1] (10) < numbers[0] (20): Hoản đổi [10, 20, 16, 6, 89]
 * numbers[2] (16) > numbers[0] (10): Không hoán đổi
 * numbers[3] (6) < numbers[0] (10): Hoán đổi [6, 20, 16, 10, 89]
 * numbers[4] (89) > numbers[0] (6): Không hoán đổi
-
+```
 2. Lần lặp thứ 2 (i = 1): Lúc này mảng đang có dạng [6, 20, 16, 10, 89]
 - So sánh phần tử:
+```python
 * numbers[2] (20) < number[1] (16): Hoán đổi [6,16,20,10,89]
 * numbers[3] (10) < number[1] (16): Hoán đổi [6,10,20,16,89]
 * numbers[4] (89) > number[1] (10): Không hoán đổi
-
-3. Lần lặp thứ 3 (i = 2): Lúc này mảng đang có dạng  [6,10,20,16,89]
+```
+1. Lần lặp thứ 3 (i = 2): Lúc này mảng đang có dạng  [6,10,20,16,89]
 - So sánh phần tử: 
+```python
 * numbers[3] (16) < numbers[2] (20): Hoán đổi [6,10,16,20,89]
 * numbers[4] (89) > numbers[2] (16): Không hoán đổi
-
-4. Lần thứ 4: Còn 1 phần tử cuối
+```
+1. Lần thứ 4: Còn 1 phần tử cuối
+```python
  => IN RA MẢNG CUỐI: [6,10,16,20,89]
+ ```
