@@ -24,6 +24,7 @@ return conquer(numbers, left_numbers, right_numbers)
 
 # Sort
 
+`
 def conquer(numbers, left_numbers, right_numbers):
 new_nums = []
 i = 0
@@ -34,7 +35,7 @@ new_nums.append(left_numbers[i])
 i += 1
 else:
     new_nums.append(right_numbers[j])
-    j += 1
+j += 1
     if i < len(left_numbers):
     new_nums += left_numbers[i:]
 
@@ -42,7 +43,7 @@ else:
         new_nums += right_numbers[j:]
     return new_nums
 
-divide(numbers, 0, len(numbers)-1)
+divide(numbers, 0, len(numbers)-1)`
 
 2.  Giải thích cách hoạt động của merge sort:
     a) Chia nhỏ:
