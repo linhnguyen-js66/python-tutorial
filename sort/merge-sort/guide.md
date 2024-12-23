@@ -12,7 +12,7 @@
   numbers = [20, 10, 16, 6, 89, 1, 5, 9, 100]
 
 # Divide
-
+```python
 def divide(numbers, start, end):
 if start == end:
 return [numbers[start]]
@@ -24,7 +24,6 @@ return conquer(numbers, left_numbers, right_numbers)
 
 # Sort
 
-`
 def conquer(numbers, left_numbers, right_numbers):
 new_nums = []
 i = 0
@@ -42,8 +41,7 @@ j += 1
     if j < len(right_numbers):
         new_nums += right_numbers[j:]
     return new_nums
-
-divide(numbers, 0, len(numbers)-1)`
+    divide(numbers, 0, len(numbers)-1)
 
 2.  Giải thích cách hoạt động của merge sort:
     a) Chia nhỏ:
