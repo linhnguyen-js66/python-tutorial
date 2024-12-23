@@ -24,7 +24,7 @@ Giảm j để tiếp tục kiểm tra phần tử trước đó.
 - Giảm j để tiếp tục kiểm tra phần tử trước đó.
 
 c) Minh hoạ: 
-
+```python
 numbers = [100, 20, 10, 16, 6, 89]
 
 for i in range(1, len(numbers)):
@@ -34,15 +34,17 @@ for i in range(1, len(numbers)):
         numbers[j + 1] = numbers[j]
         j -= 1
     numbers[j+1] = curr
-
+```
 1. Lần lặp đầu tiên i = 1: 
 - So sánh từng phần tử:
-* numbers[1] (20) < numbers[0] (100): Rời [20,100,10,16,6,89]
+```python
+* numbers[1] (20) < numbers[0] (100): #Rời [20,100,10,16,6,89]
 * numbers[2](10) < numbers[1](100) && numbers[2] (10) > numbers[0](20): 
-=> Hoán đổi [10,20,100,16,6,89]
+#=> Hoán đổi [10,20,100,16,6,89]
 * numbers[3] < numbers[2](100) && numbers[3] < numbers[1] (20) && numbers[3] (16) > numbers[0] 
-=> Hoán đổi [10,16,20,100,6,89]
+#=> Hoán đổi [10,16,20,100,6,89]
 * numbers[4] < numbers[3](100) && numbers[4] < numbers[2](20) && numbers[4] < numbers[1] (16) &&  numbers[4] (6) < numbers[0] (10) 
-=> Hoán đổi [6,10,16,20,100,89]
+#=> Hoán đổi [6,10,16,20,100,89]
 * numbers[5] (89) < numbers[4] (100) && numbers[5] > numbers[3] (20) && numbers[5] > numbers[2] (16) && numbers[5] > numbers[1] (10) && numbers[5] > numbers[0] (6)
-=> Hoán đổi [6,10,16,20,89,100]
+#=> Hoán đổi [6,10,16,20,89,100]
+```
