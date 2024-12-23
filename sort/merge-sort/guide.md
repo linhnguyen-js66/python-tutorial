@@ -136,10 +136,10 @@ left: [100]
 [10, 20] [6,16] [1, 89] [5, 9] [100] 
 ```
 2. Lần lặp thứ 2
-# Khi bạn thực hiện lần gộp đầu tiên, các biến i và j được sử dụng để duyệt qua các phần tử của mảng con
-# (tức là left_numbers và right_numbers). Sau mỗi lần gộp xong một cặp mảng con, hàm đệ quy sẽ quay trở
-# lại cấp trên và thực hiện gộp các mảng con khác. Điều này dẫn đến việc các biến i và j được khởi tạo
-# lại từ đầu (bằng 0) trong mỗi lần gộp mới.
+Khi bạn thực hiện lần gộp đầu tiên, các biến i và j được sử dụng để duyệt qua các phần tử của mảng con
+(tức là left_numbers và right_numbers). Sau mỗi lần gộp xong một cặp mảng con, hàm đệ quy sẽ quay trở
+lại cấp trên và thực hiện gộp các mảng con khác. Điều này dẫn đến việc các biến i và j được khởi tạo
+lại từ đầu (bằng 0) trong mỗi lần gộp mới.
 ```python
 - left: [10, 20] right: [6, 16]
 
