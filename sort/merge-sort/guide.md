@@ -42,7 +42,7 @@ j += 1
         new_nums += right_numbers[j:]
     return new_nums
     divide(numbers, 0, len(numbers)-1)
-
+```
 2.  Giải thích cách hoạt động của merge sort:
     a) Chia nhỏ:
 1.  Lần lặp thứ nhất
