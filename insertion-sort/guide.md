@@ -1,4 +1,4 @@
-![insertion image](./images/insertion-sort.png "insertion")
+![insertion image](../images/insertion-sort.png "insertion")
 
 1. Giải thích cách hoạt động của thuật toán insertion sort:
 Sắp xếp chèn một thuật toán sắp xếp đơn giản hoạt động bằng cách lặp lại việc chèn từng
