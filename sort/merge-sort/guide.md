@@ -48,15 +48,16 @@ j += 1
 1.  Lần lặp thứ nhất
 
 - Gọi divide(numbers, 0, len(numbers) -1)
-
+```python
 start = 0
 end = 8
 
 => midle = (start + end) // 2 = 4
 divide(numbers, 0, 4) - divide(numbers, 5, 8)
 left: [20, 10, 16, 6, 89] - right:[1, 5, 9, 100]
-
+```
 2. Lần lặp thứ hai:
+```python
    left = divide(numbers, 0, 4) => middle = (0 + 4)//2 = 2
    Chia: left = divide(numbers, 0, 2) [20, 10, 16]
    right = divide(numbers, 3, 4) [6, 89]
@@ -64,8 +65,9 @@ left: [20, 10, 16, 6, 89] - right:[1, 5, 9, 100]
 right = divide(numbers, 5, 8) => middle = (5 + 8)// = 6
 Chia: left = divide(numbers, 5, 6) [1, 5]
 right = divide(numbers, 7, 8) [9, 100]
-
+```
 3. Lặp lần thứ 3:
+```python
    divide(numbers, 0, 2) [20, 10, 16]
    => middle = (0 + 2) // 2 = 1
    left: divide(number, 0, 1) [20, 10]
@@ -85,19 +87,19 @@ divide(numbers, 7, 8) [9, 100]
 => middle = (7 + 8) // 2 = 7
 left: [9]
 right: [100]
-
+```
 4. Lần lặp thứ 4:
-
+```python
 divide(numbers, 0, 1) [20, 10]
 left: [20]
 right: [10]
 
 => [20] [10] [16] [6] [89] [1] [5] [9] [100]
-
+```
 b) Kết hợp:
 
 1. Lần lặp thứ nhất (lúc này là các mảng đơn lẻ nên sẽ chạy hết qua các mảng đơn lẻ)
-
+```python
 i = 0
 j = 0
 
@@ -145,10 +147,10 @@ Thêm phần tử còn lại: [1, 5, 9, 89]
 
 - left: [100]
   => [6, 10, 16, 20] [1, 5, 9, 89] [100]
-
+```
 3. Lần lặp thứ 3:
-
-\*left: [6, 10, 16, 20] right: [1, 5, 9, 89]
+```python
+* left: [6, 10, 16, 20] right: [1, 5, 9, 89]
 i = 0 , j = 0
 6 > 1: [1]. j + 1 = 1
 5 < 6: [1, 5]. j + 1 = 2
@@ -159,5 +161,5 @@ i = 0 , j = 0
 20 < 89: [1, 5, 6, 9, 16, 20]
 => Thêm phần tử còn lại [1, 5, 6, 9, 16, 20, 89]
 [1, 5, 6, 9, 16, 20, 89] [100] 4. Lần lặp thứ 4:
-
+```
 So sánh từng phần tử => [1, 5, 6, 9, 16, 20, 89, 100]
