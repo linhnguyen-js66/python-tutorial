@@ -117,12 +117,12 @@ j = 0
 left: [20] right: [10]
 
 - left[0] (20) > right[0] (10) => new_nums.append(right_numbers) new_nums = [10]
-  chạy tiếp if i < len(left_numbers) (do 20 là phần tử còn thừa trong left_numbers) => [10, 20]
+  #chạy tiếp if i < len(left_numbers) - (do 20 là phần tử còn thừa trong left_numbers) => [10, 20]
 
 left: [16] right: [6]
 
 - left[0] (16) > right[0] (6) => new_nums.append(right_numbers) new_nums = [6]
-  chạy tiếp if i < len(left_numbers) (do 16 là phần tử còn thừa trong left_numbers) => [6, 16]
+  #chạy tiếp if i < len(left_numbers) - (do 16 là phần tử còn thừa trong left_numbers) => [6, 16]
 
 left: [89] right: [1]
 
@@ -130,7 +130,7 @@ left: [89] right: [1]
 
 left: [5] right: [9]
 
-- => [5] => [5, 9] (9 phần tử còn lại right_numbers)
+- => [5] => [5, 9] #(9 phần tử còn lại right_numbers)
 
 left: [100]
 [10, 20] [6,16] [1, 89] [5, 9] [100] 2. Lần lặp thứ 2
@@ -141,20 +141,20 @@ left: [100]
 
 - left: [10, 20] right: [6, 16]
 
-* So sánh từng phần tử:
+#So sánh từng phần tử:
   i = 0, j = 0
-  10 > 6: [6]. Tăng: j+= 1 => j = 1
-  10 < 16: [6, 10]. Tăng: i += 1 => i = 1
-  20 > 16: [6, 10, 16]. Ko tăng do điều kiện < len(right_numbers)
-  Thêm phần còn lại: [6, 10, 16, 20]
+  10 > 6: [6]. #Tăng: j+= 1 => j = 1
+  10 < 16: [6, 10]. #Tăng: i += 1 => i = 1
+  20 > 16: [6, 10, 16]. #Ko tăng do điều kiện < len(right_numbers)
+  #Thêm phần còn lại: [6, 10, 16, 20]
 
 - left: [1, 89] right: [5, 9]
   i = 0, j = 0
 
-1 < 5: [1]. Tăng i = 1
-89 > 5: [1, 5]. Tăng j = 1
+1 < 5: [1]. #Tăng i = 1
+89 > 5: [1, 5]. #Tăng j = 1
 9 < 89: [1, 5, 9]
-Thêm phần tử còn lại: [1, 5, 9, 89]
+#Thêm phần tử còn lại: [1, 5, 9, 89]
 
 - left: [100]
   => [6, 10, 16, 20] [1, 5, 9, 89] [100]
@@ -172,8 +172,10 @@ i = 0 , j = 0
 89 > 10: [1, 5, 6, 9, 10]. i + 1 = 2
 16 < 89: [1, 5, 6, 9, 16].i + 1 = 3
 20 < 89: [1, 5, 6, 9, 16, 20]
-=> Thêm phần tử còn lại [1, 5, 6, 9, 16, 20, 89]
-[1, 5, 6, 9, 16, 20, 89] [100] 4. Lần lặp thứ 4:
+#=> Thêm phần tử còn lại [1, 5, 6, 9, 16, 20, 89]
+[1, 5, 6, 9, 16, 20, 89] [100] 
 ```
-
-So sánh từng phần tử => [1, 5, 6, 9, 16, 20, 89, 100]
+4. Lần lặp thứ 4:
+```python
+#So sánh từng phần tử => [1, 5, 6, 9, 16, 20, 89, 100]
+```
