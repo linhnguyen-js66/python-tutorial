@@ -12,6 +12,7 @@
   numbers = [20, 10, 16, 6, 89, 1, 5, 9, 100]
 
 # Divide
+
 ```python
 def divide(numbers, start, end):
 if start == end:
@@ -43,11 +44,13 @@ j += 1
     return new_nums
     divide(numbers, 0, len(numbers)-1)
 ```
+
 2.  Giải thích cách hoạt động của merge sort:
     a) Chia nhỏ:
 1.  Lần lặp thứ nhất
 
 - Gọi divide(numbers, 0, len(numbers) -1)
+
 ```python
 start = 0
 end = 8
@@ -56,7 +59,9 @@ end = 8
 divide(numbers, 0, 4) - divide(numbers, 5, 8)
 left: [20, 10, 16, 6, 89] - right:[1, 5, 9, 100]
 ```
+
 2. Lần lặp thứ hai:
+
 ```python
    left = divide(numbers, 0, 4) => middle = (0 + 4)//2 = 2
    Chia: left = divide(numbers, 0, 2) [20, 10, 16]
@@ -66,7 +71,9 @@ right = divide(numbers, 5, 8) => middle = (5 + 8)// = 6
 Chia: left = divide(numbers, 5, 6) [1, 5]
 right = divide(numbers, 7, 8) [9, 100]
 ```
+
 3. Lặp lần thứ 3:
+
 ```python
    divide(numbers, 0, 2) [20, 10, 16]
    => middle = (0 + 2) // 2 = 1
@@ -88,7 +95,9 @@ divide(numbers, 7, 8) [9, 100]
 left: [9]
 right: [100]
 ```
+
 4. Lần lặp thứ 4:
+
 ```python
 divide(numbers, 0, 1) [20, 10]
 left: [20]
@@ -96,9 +105,11 @@ right: [10]
 
 => [20] [10] [16] [6] [89] [1] [5] [9] [100]
 ```
+
 b) Kết hợp:
 
 1. Lần lặp thứ nhất (lúc này là các mảng đơn lẻ nên sẽ chạy hết qua các mảng đơn lẻ)
+
 ```python
 i = 0
 j = 0
@@ -123,10 +134,10 @@ left: [5] right: [9]
 
 left: [100]
 [10, 20] [6,16] [1, 89] [5, 9] [100] 2. Lần lặp thứ 2
-Khi bạn thực hiện lần gộp đầu tiên, các biến i và j được sử dụng để duyệt qua các phần tử của mảng con
-(tức là left_numbers và right_numbers). Sau mỗi lần gộp xong một cặp mảng con, hàm đệ quy sẽ quay trở
-lại cấp trên và thực hiện gộp các mảng con khác. Điều này dẫn đến việc các biến i và j được khởi tạo
-lại từ đầu (bằng 0) trong mỗi lần gộp mới.
+# Khi bạn thực hiện lần gộp đầu tiên, các biến i và j được sử dụng để duyệt qua các phần tử của mảng con
+# (tức là left_numbers và right_numbers). Sau mỗi lần gộp xong một cặp mảng con, hàm đệ quy sẽ quay trở
+# lại cấp trên và thực hiện gộp các mảng con khác. Điều này dẫn đến việc các biến i và j được khởi tạo
+# lại từ đầu (bằng 0) trong mỗi lần gộp mới.
 
 - left: [10, 20] right: [6, 16]
 
@@ -148,7 +159,9 @@ Thêm phần tử còn lại: [1, 5, 9, 89]
 - left: [100]
   => [6, 10, 16, 20] [1, 5, 9, 89] [100]
 ```
+
 3. Lần lặp thứ 3:
+
 ```python
 * left: [6, 10, 16, 20] right: [1, 5, 9, 89]
 i = 0 , j = 0
@@ -162,4 +175,5 @@ i = 0 , j = 0
 => Thêm phần tử còn lại [1, 5, 6, 9, 16, 20, 89]
 [1, 5, 6, 9, 16, 20, 89] [100] 4. Lần lặp thứ 4:
 ```
+
 So sánh từng phần tử => [1, 5, 6, 9, 16, 20, 89, 100]
