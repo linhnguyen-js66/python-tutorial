@@ -33,8 +33,8 @@ if left_numbers[i] < right_numbers[j]:
 new_nums.append(left_numbers[i])
 i += 1
 else:
-new_nums.append(right_numbers[j])
-j += 1
+    new_nums.append(right_numbers[j])
+    j += 1
     if i < len(left_numbers):
     new_nums += left_numbers[i:]
 
