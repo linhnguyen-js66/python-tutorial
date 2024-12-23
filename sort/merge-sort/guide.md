@@ -1,4 +1,4 @@
-![merge image](../images/merge.png "insertion")
+![merge image](../../images/merge.png "insertion")
 
 1. Giải thích cách hoạt động của thuật toán merge sort:
 Merge Sort là một thuật toán sắp xếp phổ biến được biết đến với hiệu quả và tính ổn định. 
