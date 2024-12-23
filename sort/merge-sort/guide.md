@@ -35,8 +35,8 @@ i += 1
 else:
 new_nums.append(right_numbers[j])
 j += 1
-if i < len(left_numbers):
-new_nums += left_numbers[i:]
+    if i < len(left_numbers):
+    new_nums += left_numbers[i:]
 
     if j < len(right_numbers):
         new_nums += right_numbers[j:]
